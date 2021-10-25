@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <body>
+            <style>
+                body {
+                    background-color: skyblue;
+                }
+                h1 {
+                    text-align: center;
+                    border-top-left-radius: 2;
+                }
+
+                #title {
+                    text-align: center;
+                }
+
+                input{
+                    font-size: 120%;
+                    color: #5a5854;
+                    background-color: #f2f2f2;
+                    border: 1px solid #bdbdbd;
+                    border-radius: 5px;
+                    padding: 5px 5px 5px 10px;
+                    background-repeat: no-repeat;
+                    background-position: 8px 9px;
+                    float:left;
+                    margin-bottom: 10px;
+                    }
+                    input[type="submit"]{
+                    display:block;
+                    }
+                    form{width: 400px; }
+                    label{
+                    font-family:arial;
+                    width:120px;
+                    display:inline;
+                    text-align: left;
+                    padding: 10px 15px 10px 15px;
+                    float:left;
+            }
+            </style>
+        </body>
+    </head>
+    <body>
+        <h1>Macbook Shop</h1>
+        <p id="title">Welcome to Macbook Shop</p>
+         <hr>
+        <h3>Available Macbooks:</h3>
+        <ul>
+            #for(store in stores): 
+                <li>#(store.name + model)</li>
+            #endfor
+        </ul>
+        <hr>
+        <h3>Add New Macbook</h3>
+
+        <form method="post" action="/add">
+  
+            <label for="name"> Name</label>
+              <input type="text" name="username" size="15" maxlength="30"> 
+                <label for=lname>Model</label>
+              <input type="text" name="lname" size="15" maxlength="30"> 
+              <label for="name"> Cpu</label>
+              <input type="text" name="username" size="15" maxlength="30"> 
+                <label for=lname>Price</label>
+              <input type="number" name="lname" style="width: 174px !important;" size="15" maxlength="30"> 
+            <br clear="all">
+            <input type="submit" value="Add" style="
+            margin-left: 50% !important;
+            padding-top: 5px;
+            margin-top: 15px;
+        ">          </form>
+    </body>
+</html>
