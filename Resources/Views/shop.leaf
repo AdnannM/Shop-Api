@@ -27,6 +27,7 @@
             border-radius: 20px;
             padding-right: 30px;
             font-family: Montserrat;
+            font-family: "Cormorant Garamond", serif;
         }
 
         .btn-con {
@@ -38,12 +39,11 @@
         }
 
         .btn {
-            /* border: 2px solid #0c0a85; */
             background-color: transparent;
             background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
             color: #f7f3f3;
             padding: 10px 30px;
-            font-size: 28px;
+            font-size: 20px;
             cursor: pointer;
             text-decoration: none;
             transition: 256ms all;
@@ -75,11 +75,8 @@
 
         .add-button {
             width: 200px;
-            /* height: 100px; */
             background: #f3f0f1;
-            /* position: relative; */
             background: #f3f0f1;
-            /* margin-bottom: 55px; */
             border-radius: 32px;
             cursor: pointer;
             transition: all 0.1s ease-in-out;
@@ -119,7 +116,6 @@
             background-position: 8px 9px;
             float: left;
             color: rgb(255, 255, 255);
-            /* margin-bottom: 10px; */
             font-family: Montserrat;
         }
 
@@ -166,7 +162,6 @@
             justify-content: center;
             align-items: center;
             text-align: left;
-            /* align-items: baseline; */
             justify-content: space-evenly;
             flex-direction: row;
 
@@ -204,26 +199,92 @@
             text-align: right;
             border-radius: 10px;
         }
+
+        .frame {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+            padding: 10px;
+            border-bottom: groove;
+            border-color: white;
+            border-width: 0.2;
+            
+        }
+
+        .btn-header {
+            height: 25px;
+            width: 25px;
+            border-radius: 10px;
+            background: #e0e5ec;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+            box-shadow:
+                -7px -7px 20px 0px #c15371,
+                -4px -4px 5px 0px #fff9,
+                7px 7px 20px 0px #0002,
+                4px 4px 5px 0px #0001,
+                inset 0px 0px 0px 0px #fff9,
+                inset 0px 0px 0px 0px #0001,
+                inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+            transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
+            font-size: 16px;
+            color: rgba(42, 52, 84, 1);
+            text-decoration: none;
+            padding: 4.5px;
+            margin-left: 14px;
+            
+        }
+
+        .btn-header:active {
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+        }
     </style>
 </body>
 </head>
 
 <body>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     <div id="header-title">
         <h1>Macbook Shop</h1>
         <p id="title">Welcome to Macbook Shop</p>
     </div>
-    <hr>
-    <section style="height: 570px;" class="bg-img" id="main">
 
+    <div class="frame">
+        <a href="#" class="btn-header">
+            <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-twitter" style="color: #00acee;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-get-pocket" style="color:#ee4056;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
 
-
+    <section style="height: 550px;" class="bg-img" id="main">
         <div id="button">
             <div class="btn-con"><a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a></div>
         </div>
     </section>
-
 
     <section id="form-sec">
         <div class="form-field" , id="form-middle">
@@ -237,9 +298,7 @@
         <h3 class="add-header">Add New Macbook</h3>
         <div class="inline" id="form-middle">
             <div id="form-right">
-
                 <form method="post" action="/add">
-
                     <label for="name"> Name</label>
                     <input type="text" name="username" size="30" maxlength="30">
                     <label for=lname>Model</label>
@@ -250,15 +309,15 @@
                     <input type="number" name="lname" size="30" maxlength="30">
                     <br clear="all">
                     <input class="add-button" id="button" type="submit" value="Add" size="30" style="
-                /* margin-left: 50% !important; */
-                 padding-top: 5px;
-                color: black;
-                margin-top: 20px;
-        ">
+                     padding-top: 5px;
+                     color: black;
+                     margin-top: 20px;
+                    ">
             </div>
-            </form>
+                </form>
         </div>
     </section>
 </body>
-
+<footer>
+</footer>
 </html>
