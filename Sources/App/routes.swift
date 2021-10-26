@@ -30,10 +30,40 @@ func routes(_ app: Application) throws {
     
     app.get { req -> EventLoopFuture<View> in
         
-        let person = Macbooks(name: "Macbook Pro", model: "Space Gray", cpu: "Apple M1 Chip Max", price: 2999)
-        let personOne = Macbooks(name: "Macbook Air", model: "Silver", cpu: "Apple M1 Chip", price: 999)
+        let person = Macbooks           (name: "Macbook Pro",
+                                         model: "Space Gray",
+                                         cpu: "Apple M1 Chip Max",
+                                         price: 2999)
+        let personOne = Macbooks        (name: "Macbook Air",
+                                         model: "Silver",
+                                         cpu: "Apple M1 Chip",
+                                         price: 999)
+        let personThree = Macbooks      (name: "Macbook Pro",
+                                         model: "Space Gray",
+                                         cpu: "Apple M1 Chip Max",
+                                         price: 2999)
+        let personOneFour = Macbooks    (name: "Macbook Air",
+                                         model: "Silver",
+                                         cpu: "Apple M1 Chip",
+                                         price: 999)
+        let person1 = Macbooks           (name: "Macbook Pro",
+                                         model: "Space Gray",
+                                         cpu: "Apple M1 Chip Max",
+                                         price: 2999)
+        let personOne2 = Macbooks        (name: "Macbook Air",
+                                         model: "Silver",
+                                         cpu: "Apple M1 Chip",
+                                         price: 999)
+        let personThree3 = Macbooks      (name: "Macbook Pro",
+                                         model: "Space Gray",
+                                         cpu: "Apple M1 Chip Max",
+                                         price: 2999)
+        let personOneFour4 = Macbooks    (name: "Macbook Air",
+                                         model: "Silver",
+                                         cpu: "Apple M1 Chip",
+                                         price: 999)
         
-        return  req.view.render("shop", ["stores":[person, personOne]])
+        return  req.view.render("shop", ["stores":[person, personOne,personThree,personOneFour, person1,personOne2, personThree3, personOneFour4]])
     }
     
     try app.register(collection: TodoController())

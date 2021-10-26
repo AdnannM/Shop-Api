@@ -4,22 +4,26 @@
 
 <body>
     <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
         body {
             background-color: #010101;
         }
-    .bg-img {
-        background-image: url(https://images.financialexpress.com/2020/11/mac1.jpg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
 
-    }
+        .bg-img {
+            background-image: url(https://images.financialexpress.com/2020/11/mac1.jpg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+
+        }
 
         h1 {
-            text-align: center;
+            text-align: right;
             border-top-left-radius: 2;
-            color: #f2f2f2;
+            color: #ffffff;
+            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
             padding-right: 30px;
         }
 
@@ -28,14 +32,14 @@
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            padding-top: 410px;
-        } 
+            padding-top: 370px;
+        }
 
-         .btn {
+        .btn {
             /* border: 2px solid #0c0a85; */
             background-color: transparent;
-            background-image: linear-gradient(to right, #e45026 0%, #007d98 51%, #40b79b 100%);
-            color: #000000;
+            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
+            color: #f7f3f3;
             padding: 10px 30px;
             font-size: 28px;
             cursor: pointer;
@@ -52,9 +56,28 @@
 
 
         #title {
-            text-align: center;
-            color: #f2f2f2;
+            text-align: right;
+            color: #ffffff;
+            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
             padding-right: 30px;
+        }
+
+        .add-button {
+            width: 200px;
+            /* height: 100px; */
+            background: #f3f0f1;
+            /* position: relative; */
+            background: #f3f0f1;
+            /* margin-bottom: 55px; */
+            border-radius: 32px;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            height: 34px;
+
+        }
+
+        .add-button:hover {
+            color: #c15371;
         }
 
         h3 {
@@ -63,12 +86,13 @@
 
         ul {
             color: #f2f2f2;
+            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
         }
 
         input {
             font-size: 120%;
-            color: #faf8f3;
-            background-color: #f2f2f2;
+            color: #0a0a0a;
+            background-color: #000000;
             border: 1px solid #faf8f8;
             border-radius: 5px;
             padding: 5px 5px 5px 10px;
@@ -79,12 +103,17 @@
             margin-bottom: 10px;
         }
 
+        input[type="number"] {
+            width: 324px !important;
+        }
+
         input[type="submit"] {
             display: block;
         }
 
         form {
             width: 400px;
+            size: 30px;
         }
 
         label {
@@ -103,6 +132,7 @@
 
         .form-field {
             text-align: center;
+            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
         }
 
         #main {
@@ -111,11 +141,15 @@
         }
 
         #form-middle {
-            height:250px;
-            display: flex;
+            height: 260px;
+            display: inline;
             justify-content: center;
             align-items: center;
-            flex-direction: column; 
+            text-align: left;
+            /* align-items: baseline; */
+            justify-content: space-evenly;
+            flex-direction: row;
+           
         }
 
         #header-title {
@@ -124,6 +158,20 @@
             margin: 20px;
         }
 
+        .inline {
+            text-align: right;
+            align-items: right;
+            
+        }
+
+        #form-right {
+            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
+            float: right;
+            position: inline;
+        }
+        .list {
+            color: #000000;
+        }
     </style>
 </body>
 </head>
@@ -135,47 +183,49 @@
         <p id="title">Welcome to Macbook Shop</p>
     </div>
     <hr>
-    <section style="height: 670px;" class="bg-img" id="main">
+    <section style="height: 570px;" class="bg-img" id="main">
 
-        
+
 
         <div id="button">
             <div class="btn-con"><a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a></div>
-            </div>  
+        </div>
     </section>
 
 
     <section id="form-sec">
-        <div class="form-field", id="form-middle">
+        <div class="form-field" , id="form-middle">
             <h3>Available Macbooks:</h3>
-            <ul>
+            <ul class="list">
                 #for(store in stores):
                 <li>#(store.name + " " + store.model)</li>
                 #endfor
             </ul>
-            <h3>Add New Macbook</h3>
         </div>
-        <div id="form-middle">
-            <form method="post" action="/add">
+        <div class="inline" id="form-middle">
+            <div id="form-right">
+                <h3>Add New Macbook</h3>
+                <form method="post" action="/add">
 
-                <label for="name"> Name</label>
-                <input type="text" name="username" size="15" maxlength="30">
-                <label for=lname>Model</label>
-                <input type="text" name="lname" size="15" maxlength="30">
-                <label for="name"> Cpu</label>
-                <input type="text" name="username" size="15" maxlength="30">
-                <label for=lname>Price</label>
-                <input type="number" name="lname" style="width: 174px !important;" size="25" maxlength="30">
-                <br clear="all">
-                <input id="button" type="submit" value="Add" style="
-            margin-left: 50% !important;
-            padding-top: 5px;
-            color: black;
-            margin-top: 15px;
-            
+                    <label for="name"> Name</label>
+                    <input type="text" name="username" size="30" maxlength="30">
+                    <label for=lname>Model</label>
+                    <input type="text" name="lname" size="30" maxlength="30">
+                    <label for="name"> Cpu</label>
+                    <input type="text" name="username" size="30" maxlength="30">
+                    <label for=lname>Price</label>
+                    <input type="number" name="lname" size="30" maxlength="30">
+                    <br clear="all">
+                    <input class="add-button" id="button" type="submit" value="Add" size="30" style="
+                /* margin-left: 50% !important; */
+                 padding-top: 5px;
+                color: black;
+                margin-top: 20px;
         ">
+            </div>
             </form>
         </div>
     </section>
 </body>
+
 </html>
