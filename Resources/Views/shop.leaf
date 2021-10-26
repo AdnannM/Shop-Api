@@ -27,7 +27,6 @@
             border-radius: 20px;
             padding-right: 30px;
             font-family: Montserrat;
-            font-family: "Cormorant Garamond", serif;
         }
 
         .btn-con {
@@ -35,7 +34,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            padding-top: 370px;
+            padding-top: 350px;
         }
 
         .btn {
@@ -95,13 +94,17 @@
             padding-left: 20px;
             color: #000000;
             font-family: Montserrat;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
-            border-radius: 20px;
+            background-image: linear-gradient(to right, #c15371 21%, #010101 40%);
+            border-radius: 8px;
+            text-decoration: wavy;
+            margin-bottom: 15px;
+            margin-left: 35px;
         }
 
         ul {
             color: #f2f2f2;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
+            background-image: linear-gradient(to right, #c15371 20%, #010101 40%);
+            margin: 35px;
             font-family: Montserrat;
         }
 
@@ -149,6 +152,7 @@
         .form-field {
             text-align: center;
             background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
+            padding-top: 50px;
         }
 
         #main {
@@ -164,6 +168,8 @@
             text-align: left;
             justify-content: space-evenly;
             flex-direction: row;
+            padding-top: 50px;
+            margin-top: 40px;
 
         }
 
@@ -180,16 +186,17 @@
         }
 
         #form-right {
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
+            background-image: linear-gradient(to right, #c15371 11%, #010101 70%);
             float: right;
             position: inline;
             border-radius: 20px;
-            padding-left: 20px;
+            padding-left: 14px;
         }
 
         .list {
             color: #000000;
             border-radius: 20px;
+            line-height: 30px;
         }
 
         .add-header {
@@ -197,7 +204,8 @@
             color: #fff8f8;
             font-family: Montserrat;
             text-align: right;
-            border-radius: 10px;
+            border-radius: 8px;
+            margin-left: 35px;
         }
 
         .frame {
@@ -247,6 +255,10 @@
                 inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
                 inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
         }
+
+        .form-sec {
+            padding-top: 20px;
+        }
     </style>
 </body>
 </head>
@@ -280,13 +292,13 @@
         </a>
     </div>
 
-    <section style="height: 550px;" class="bg-img" id="main">
+    <section style="height: 500px;" class="bg-img" id="main">
         <div id="button">
             <div class="btn-con"><a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a></div>
         </div>
     </section>
 
-    <section id="form-sec">
+    <section id="form-sec" style="padding-top: 21px;">
         <div class="form-field" , id="form-middle">
             <h3>Available Macbooks:</h3>
             <ul class="list">
@@ -310,8 +322,9 @@
                     <br clear="all">
                     <input class="add-button" id="button" type="submit" value="Add" size="30" style="
                      padding-top: 5px;
-                     color: black;
+                     color: rgb(241, 232, 232);
                      margin-top: 20px;
+                     margin-left: 17%;
                     ">
             </div>
                 </form>

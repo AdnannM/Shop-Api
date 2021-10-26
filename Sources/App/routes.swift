@@ -42,10 +42,6 @@ func routes(_ app: Application) throws {
                                          model: "Space Gray",
                                          cpu: "Apple M1 Chip Max",
                                          price: 2999)
-        let personOneFour = Macbooks    (name: "Macbook Air",
-                                         model: "Silver",
-                                         cpu: "Apple M1 Chip",
-                                         price: 999)
         let person1 = Macbooks           (name: "Macbook Pro",
                                          model: "Space Gray",
                                          cpu: "Apple M1 Chip Max",
@@ -58,12 +54,9 @@ func routes(_ app: Application) throws {
                                          model: "Space Gray",
                                          cpu: "Apple M1 Chip Max",
                                          price: 2999)
-        let personOneFour4 = Macbooks    (name: "Macbook Air",
-                                         model: "Silver",
-                                         cpu: "Apple M1 Chip",
-                                         price: 999)
+
         
-        return  req.view.render("shop", ["stores":[person, personOne,personThree,personOneFour, person1,personOne2, personThree3, personOneFour4]])
+        return  req.view.render("shop", ["stores":[person, personOne,personThree, person1, personOne2, personThree3]])
     }
     
     try app.register(collection: TodoController())
