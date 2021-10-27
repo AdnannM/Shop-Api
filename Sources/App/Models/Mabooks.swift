@@ -7,8 +7,12 @@
 
 import Foundation
 import Vapor
+import FluentSQLiteDriver
 
 final class Macbooks: Content {
+    
+    static let schema = "macbook"
+    
     var name: String
     var model: String
     var cpu: String

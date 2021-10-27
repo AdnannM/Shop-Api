@@ -330,7 +330,11 @@
                 </form>
         </div>
     </section>
+    <div>
+        <footer>
+
+        </footer>
+    </div>
 </body>
-<footer>
-</footer>
+
 </html>
