@@ -9,7 +9,7 @@ import Foundation
 import Vapor
 import FluentSQLiteDriver
 
-final class Macbooks: Content {
+struct Macbooks: Content, Codable {
     
     static let schema = "macbook"
     
@@ -18,10 +18,12 @@ final class Macbooks: Content {
     var cpu: String
     var price: Int
     
-    init(name: String, model: String, cpu: String, price: Int) {
-        self.name = name
-        self.model = model
-        self.cpu = cpu
-        self.price = price
-    }
+//    init(name: String, model: String, cpu: String, price: Int) {
+//        self.name = name
+//        self.model = model
+//        self.cpu = cpu
+//        self.price = price
+//    }
+    
+    
 }

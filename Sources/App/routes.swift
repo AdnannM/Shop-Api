@@ -23,11 +23,9 @@ import Foundation
 
 func routes(_ app: Application) throws {
 
-    app.get("store") { req -> Macbooks in
-
-        let person = Macbooks(name: "MacbookPro", model: "Space Gray", cpu: "M1Apple M1 Chip Pro", price: 1999)
-        return person
-    }
+//    app.get("store") { req -> Macbooks in
+//        
+//    }
 
     app.get { req -> EventLoopFuture<View> in
 
@@ -37,10 +35,18 @@ func routes(_ app: Application) throws {
                                          price: 2999)
 
         return  req.view.render("shop", ["stores":[person]])
+        
+        
     }
 
+    // MARK: - Post
+//    app.post("add") { req -> EventLoopFuture<Response> in
+//        let mac = try req.content.decode(Macbooks.self)
+//    }
+    
     app.post("add") { req -> Macbooks in
         let mac = try req.content.decode(Macbooks.self)
         return mac
     }
+ 
 }
