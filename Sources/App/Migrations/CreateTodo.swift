@@ -13,8 +13,6 @@ struct CreateTodo: Migration {
     }
 }
 
-
-
 struct MacbookTodo: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         return database.schema("macbok")

@@ -336,5 +336,7 @@
         </footer>
     </div>
 </body>
-
+<script>
+    console.log("radi")
+</script>
 </html>
