@@ -18,11 +18,26 @@
 
 import Vapor
 import Foundation
+import MongoDBVapor
 
 func routes(_ app: Application) throws {
 
+    //GET Request
 
+
+    //POST Request 
+    
+    
     app.get { req -> String in
         return "it WORKS!"
     } 
 }
+
+
+extension Request {
+    var storeCollection: MongoCollection<Store> {
+        self.mongoDB.client.db("storeDb").collection("store", withType: Store.self)
+    }
+}
+
+
