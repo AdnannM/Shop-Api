@@ -330,13 +330,13 @@
                 </form>
         </div>
     </section>
-    <div>
-        <footer>
-
-        </footer>
-    </div>
 </body>
 <script>
     console.log("radi")
 </script>
+
+<div>
+    <footer>
+    </footer>
+</div>
 </html>
