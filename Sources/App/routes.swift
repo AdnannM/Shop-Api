@@ -22,10 +22,14 @@ import MongoDBVapor
 
 func routes(_ app: Application) throws {
 
-    //GET Request
+    // A GET request will return a list of all kittens in the database.
 
 
-    //POST Request 
+    // A POST request will create a new kitten in the database.
+    
+    // A PUT request will update a store in database
+    
+    // A DELETE request will delete item in database
     
     
     app.get { req -> String in
