@@ -1,7 +1,8 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+       <script src="https://unpkg.com/bson@4.4.0/dist/bson.browser.umd.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
     <style>
         @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -260,7 +261,7 @@
             padding-top: 20px;
         }
     </style>
-</body>
+
 </head>
 
 <body>
@@ -310,17 +311,18 @@
         <h3 class="add-header">Add New Macbook</h3>
         <div class="inline" id="form-middle">
             <div id="form-right">
-                <form method="post" action="">
+            
+                <form>
                     <label for="name"> Name</label>
-                    <input type="text" name="username" size="30" maxlength="30">
+                    <input id="name" type="text" name="name" size="30" maxlength="30">
                     <label for=lname>Model</label>
-                    <input type="text" name="lname" size="30" maxlength="30">
+                    <input id="modle" type="text" name="model" size="30" maxlength="30">
                     <label for="name"> Cpu</label>
-                    <input type="text" name="username" size="30" maxlength="30">
+                    <input id="cpu" type="text" name="cpu" size="30" maxlength="30">
                     <label for=lname>Price</label>
-                    <input type="number" name="lname" size="30" maxlength="30">
+                    <input id="price"type="number" name="price" size="30" maxlength="30">
                     <br clear="all">
-                    <input class="add-button" id="button" type="submit" value="Add" size="30" style="
+                    <input class="add-button" id="add-btn" type="submit" value="Add" size="30" style="
                      padding-top: 5px;
                      color: rgb(241, 232, 232);
                      margin-top: 20px;
@@ -331,9 +333,37 @@
         </div>
     </section>
 </body>
-<script>
-    console.log("radi")
-</script>
+<script type="text/javascript">
+  $(document).ready(() => {
+    $("\#add-btn").click(() => {
+      var name = $("\#name").val();
+      var model = $("\#model").val();
+      var cpu = $("\#cpu").val();
+      var price = $("\#price").val();
+      
+      var store = BSON.EJSON.stringify({
+        'name': name,
+         'model': model,
+         'cpu': cpu,
+         'price': price
+      })
+      $.ajax({
+          type:'POST',
+          contentType : 'application/json',
+          url:'/',
+          data: store,
+          success: () => {
+            window.location.href = '/';
+          },
+
+          store: JSON.stringify(data)
+
+          error: (req, status, message) => {
+            alert("Error: " + message);
+          }
+      });
+    });
+  });
 
 <div>
     <footer>
