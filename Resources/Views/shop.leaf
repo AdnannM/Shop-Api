@@ -302,15 +302,15 @@
         <div class="form-field" , id="form-middle">
             <h3>Available Macbooks:</h3>
             <ul class="list">
-                #for(store in stores):
-                <li>#(store.name + " " + store.model)</li>
+                #for(stores in store):
+                <li>#(stores.name + " " + stores.model)</li>
                 #endfor
             </ul>
         </div>
         <h3 class="add-header">Add New Macbook</h3>
         <div class="inline" id="form-middle">
             <div id="form-right">
-                <form method="post" action="/add">
+                <form method="post" action="">
                     <label for="name"> Name</label>
                     <input type="text" name="username" size="30" maxlength="30">
                     <label for=lname>Model</label>

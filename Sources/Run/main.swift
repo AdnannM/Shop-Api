@@ -15,7 +15,8 @@ defer {
     app.mongoDB.cleanup()
     // Clean up the driver's global state. The driver will no longer be usable from this program after this method is
     // called.
-    cleanupMongoSwift()
+   // cleanupMongoSwift()
+    
     app.shutdown()
     
 
