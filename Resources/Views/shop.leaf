@@ -393,6 +393,7 @@
 </script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
 
 <div>
@@ -401,6 +402,9 @@
 </div>
 </html>
 
+=======
+</html>
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 </html>
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)

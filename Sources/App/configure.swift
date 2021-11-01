@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import FluentSQLiteDriver
@@ -7,6 +8,11 @@ import Fluent
 <<<<<<< HEAD
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
+
+import FluentSQLiteDriver
+import Fluent
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 import Leaf
 import MongoDBVapor
@@ -19,9 +25,12 @@ public func configure(_ app: Application) throws {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     // Use LeafRender for view
 =======
+=======
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
     app.databases.use(.sqlite(.file("\(directoryConfig.workingDirectory)store.db")), as: .sqlite)
@@ -31,6 +40,9 @@ public func configure(_ app: Application) throws {
     try app.autoMigrate().wait()
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
@@ -41,6 +53,8 @@ public func configure(_ app: Application) throws {
     ContentConfiguration.global.use(encoder: ExtendedJSONEncoder(), for: .json)
     ContentConfiguration.global.use(decoder: ExtendedJSONDecoder(), for: .json)
     
+    
+
     
 
     
