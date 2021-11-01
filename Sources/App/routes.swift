@@ -19,6 +19,9 @@
 
 
 import Fluent
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 import Vapor
 import SQLiteKit
@@ -69,11 +72,30 @@ func routes(_ app: Application) throws {
                                          cpu: "Apple M1 Chip Max",
                                          price: 2999)
 
+<<<<<<< HEAD
         return  req.view.render("shop", ["stores":[person]])
         
         
     }
 
+=======
+//    app.get("store") { req -> Macbooks in
+//        
+//    }
+
+    app.get { req -> EventLoopFuture<View> in
+
+        let person = Macbooks           (name: "Macbook Pro",
+                                         model: "Space Gray",
+                                         cpu: "Apple M1 Chip Max",
+                                         price: 2999)
+
+        return  req.view.render("shop", ["stores":[person]])
+        
+        
+    }
+
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
     // MARK: - Post
 //    app.post("add") { req -> EventLoopFuture<Response> in
 //        let mac = try req.content.decode(Macbooks.self)
@@ -84,6 +106,9 @@ func routes(_ app: Application) throws {
         return mac
     }
  
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 }
 
