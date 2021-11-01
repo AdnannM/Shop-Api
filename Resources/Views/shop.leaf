@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-=======
+
 <html>
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
+
 
 <head>
 
@@ -312,7 +310,6 @@
         <h3 class="add-header">Add New Macbook</h3>
         <div class="inline" id="form-middle">
             <div id="form-right">
-<<<<<<< HEAD
 
             
                 <form>
@@ -321,9 +318,9 @@
                 <form method="post" action="/add">
 
 
-=======
+
                 <form method="post" action="">
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
+
                     <label for="name"> Name</label>
                     <input type="text" name="username" size="30" maxlength="30">
                     <label for=lname>Model</label>
@@ -333,12 +330,12 @@
                     <label for=lname>Price</label>
                     <input type="number" name="lname" size="30" maxlength="30">
                     <br clear="all">
-<<<<<<< HEAD
+
 
                     <input class="add-button" id="add-btn" type="submit" value="Add" size="30" style="
-=======
+
                     <input class="add-button" id="button" type="submit" value="Add" size="30" style="
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
+
                      padding-top: 5px;
                      color: rgb(241, 232, 232);
                      margin-top: 20px;
@@ -354,76 +351,5 @@
         </footer>
     </div>
 </body>
-<<<<<<< HEAD
 
-<script type="text/javascript">
-  $(document).ready(() => {
-    $("\#add-btn").click(() => {
-      var name = $("\#name").val();
-      var model = $("\#model").val();
-      var cpu = $("\#cpu").val();
-      var price = $("\#price").val();
-      
-      var store = BSON.EJSON.stringify({
-        'name': name,
-         'model': model,
-         'cpu': cpu,
-         'price': price
-      })
-      $.ajax({
-          type:'POST',
-          contentType : 'application/json',
-          url:'/',
-          data: store,
-          success: () => {
-            window.location.href = '/';
-          },
-
-          store: JSON.stringify(data)
-
-          error: (req, status, message) => {
-            alert("Error: " + message);
-          }
-      });
-    });
-  });
-=======
-<script>
-    console.log("radi")
-</script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-
-<div>
-    <footer>
-    </footer>
-</div>
 </html>
-
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
-=======
-</html>
->>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
