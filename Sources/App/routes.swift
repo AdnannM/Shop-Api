@@ -32,6 +32,8 @@ func routes(_ app: Application) throws {
         let newStore = try req.content.decode(Store.self)
         return req.storeCollection.insertOne(newStore).map { _ in Response(status: .created) }
     }
+    
+    
 }
 
 
