@@ -214,7 +214,7 @@
             border-radius: 8px;
             margin-left: 35px;
         }
-<<<<<<< HEAD
+
 
         .frame {
             display: flex;
@@ -267,8 +267,7 @@
         .form-sec {
             padding-top: 20px;
         }
-=======
->>>>>>> parent of 8602d7a (fixing header and clean code)
+
     </style>
 
 </head>
@@ -284,21 +283,21 @@
 
 
 
-<<<<<<< HEAD
+
     <section style="height: 500px;" class="bg-img" id="main">
-=======
->>>>>>> parent of 8602d7a (fixing header and clean code)
+
+
         <div id="button">
             <div class="btn-con"><a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a></div>
         </div>
     </section>
 
-<<<<<<< HEAD
+
     <section id="form-sec" style="padding-top: 21px;">
-=======
+
 
     <section id="form-sec">
->>>>>>> parent of 8602d7a (fixing header and clean code)
+
         <div class="form-field" , id="form-middle">
             <h3>Available Macbooks:</h3>
             <ul class="list">
@@ -310,14 +309,14 @@
         <h3 class="add-header">Add New Macbook</h3>
         <div class="inline" id="form-middle">
             <div id="form-right">
-<<<<<<< HEAD
+
             
                 <form>
-=======
+
 
                 <form method="post" action="/add">
 
->>>>>>> parent of 8602d7a (fixing header and clean code)
+
                     <label for="name"> Name</label>
                     <input id="name" type="text" name="name" size="30" maxlength="30">
                     <label for=lname>Model</label>
@@ -327,27 +326,19 @@
                     <label for=lname>Price</label>
                     <input id="price"type="number" name="price" size="30" maxlength="30">
                     <br clear="all">
-<<<<<<< HEAD
+
                     <input class="add-button" id="add-btn" type="submit" value="Add" size="30" style="
                      padding-top: 5px;
                      color: rgb(241, 232, 232);
                      margin-top: 20px;
                      margin-left: 17%;
                     ">
-=======
-                    <input class="add-button" id="button" type="submit" value="Add" size="30" style="
-                /* margin-left: 50% !important; */
-                 padding-top: 5px;
-                color: black;
-                margin-top: 20px;
-        ">
->>>>>>> parent of 8602d7a (fixing header and clean code)
             </div>
             </form>
         </div>
     </section>
 </body>
-<<<<<<< HEAD
+
 <script type="text/javascript">
   $(document).ready(() => {
     $("\#add-btn").click(() => {
@@ -385,7 +376,4 @@
     </footer>
 </div>
 </html>
-=======
 
-</html>
->>>>>>> parent of 8602d7a (fixing header and clean code)
