@@ -9,6 +9,7 @@ import Fluent
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
@@ -16,6 +17,8 @@ import Fluent
 
 import FluentSQLiteDriver
 import Fluent
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
@@ -38,9 +41,12 @@ public func configure(_ app: Application) throws {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     // Use LeafRender for view
 =======
+=======
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
@@ -62,6 +68,9 @@ public func configure(_ app: Application) throws {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
@@ -80,6 +89,8 @@ public func configure(_ app: Application) throws {
     ContentConfiguration.global.use(encoder: ExtendedJSONEncoder(), for: .json)
     ContentConfiguration.global.use(decoder: ExtendedJSONDecoder(), for: .json)
     
+    
+
     
 
     
