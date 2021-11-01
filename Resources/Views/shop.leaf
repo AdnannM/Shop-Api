@@ -314,15 +314,15 @@
 
                 <form method="post" action="">
                     <label for="name"> Name</label>
-                    <input type="text" name="username" size="30" maxlength="30">
+                    <input type="text" name="username" size="30" maxlength="30" id="name" >
                     <label for=lname>Model</label>
-                    <input type="text" name="lname" size="30" maxlength="30">
+                    <input type="text" name="lname" size="30" maxlength="30" id="model">
                     <label for="name"> Cpu</label>
-                    <input type="text" name="username" size="30" maxlength="30">
+                    <input type="text" name="username" size="30" maxlength="30" id="cpu">
                     <label for=lname>Price</label>
-                    <input type="number" name="lname" size="30" maxlength="30">
+                    <input type="number" name="lname" size="30" maxlength="30" id="price">
                     <br clear="all">
-                    <input class="add-button" id="button" type="submit" value="Add" size="30" style="
+                    <input id="add-btn" class="add-button" id="button" type="submit" value="Add" size="30" style="
 
                      padding-top: 5px;
                      color: rgb(241, 232, 232);
@@ -342,7 +342,7 @@
       var name = $("\#name").val();
       var model = $("\#model").val();
       var cpu = $("\#cpu").val();
-      var price = $("\#price").val();
+      var price = $price.val();
       
       var store = BSON.EJSON.stringify({
         'name': name,
