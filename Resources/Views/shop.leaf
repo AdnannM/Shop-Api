@@ -1,10 +1,9 @@
-
 <html>
 
-
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/bson@4.4.0/dist/bson.browser.umd.js"></script>
 
-<body>
     <style>
         @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
@@ -40,12 +39,11 @@
         }
 
         .btn {
-            /* border: 2px solid #0c0a85; */
             background-color: transparent;
             background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
             color: #f7f3f3;
             padding: 10px 30px;
-            font-size: 28px;
+            font-size: 20px;
             cursor: pointer;
             text-decoration: none;
             transition: 256ms all;
@@ -77,11 +75,8 @@
 
         .add-button {
             width: 200px;
-            /* height: 100px; */
             background: #f3f0f1;
-            /* position: relative; */
             background: #f3f0f1;
-            /* margin-bottom: 55px; */
             border-radius: 32px;
             cursor: pointer;
             transition: all 0.1s ease-in-out;
@@ -125,7 +120,6 @@
             background-position: 8px 9px;
             float: left;
             color: rgb(255, 255, 255);
-            /* margin-bottom: 10px; */
             font-family: Montserrat;
         }
 
@@ -173,7 +167,6 @@
             justify-content: center;
             align-items: center;
             text-align: left;
-            /* align-items: baseline; */
             justify-content: space-evenly;
             flex-direction: row;
             padding-top: 50px;
@@ -215,7 +208,6 @@
             border-radius: 8px;
             margin-left: 35px;
         }
-
 
         .frame {
             display: flex;
@@ -268,37 +260,46 @@
         .form-sec {
             padding-top: 20px;
         }
-
     </style>
 </body>
 </head>
 
 <body>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     <div id="header-title">
         <h1>Macbook Shop</h1>
         <p id="title">Welcome to Macbook Shop</p>
     </div>
-    <hr>
-    <section style="height: 570px;" class="bg-img" id="main">
 
-
-
+    <div class="frame">
+        <a href="#" class="btn-header">
+            <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-twitter" style="color: #00acee;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="fab fa-get-pocket" style="color:#ee4056;"></i>
+        </a>
+        <a href="#" class="btn-header">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
 
     <section style="height: 500px;" class="bg-img" id="main">
-
-
         <div id="button">
             <div class="btn-con"><a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a></div>
         </div>
     </section>
 
-
     <section id="form-sec" style="padding-top: 21px;">
-
-
-    <section id="form-sec">
-
         <div class="form-field" , id="form-middle">
             <h3>Available Macbooks:</h3>
             <ul class="list">
@@ -311,16 +312,7 @@
         <div class="inline" id="form-middle">
             <div id="form-right">
 
-            
-                <form>
-
-
-                <form method="post" action="/add">
-
-
-
                 <form method="post" action="">
-
                     <label for="name"> Name</label>
                     <input type="text" name="username" size="30" maxlength="30">
                     <label for=lname>Model</label>
@@ -330,10 +322,6 @@
                     <label for=lname>Price</label>
                     <input type="number" name="lname" size="30" maxlength="30">
                     <br clear="all">
-
-
-                    <input class="add-button" id="add-btn" type="submit" value="Add" size="30" style="
-
                     <input class="add-button" id="button" type="submit" value="Add" size="30" style="
 
                      padding-top: 5px;
@@ -341,15 +329,56 @@
                      margin-top: 20px;
                      margin-left: 17%;
                     ">
+            
+                </form>
             </div>
-            </form>
         </div>
     </section>
-    <div>
-        <footer>
 
-        </footer>
-    </div>
+
+<script type="text/javascript">
+  $(document).ready(() => {
+    $("\#add-btn").click(() => {
+      var name = $("\#name").val();
+      var model = $("\#model").val();
+      var cpu = $("\#cpu").val();
+      var price = $("\#price").val();
+      
+      var store = BSON.EJSON.stringify({
+        'name': name,
+         'model': model,
+         'cpu': cpu,
+         'price': price
+      })
+      $.ajax({
+          type:'POST',
+          contentType : 'application/json',
+          url:'/',
+          data: store,
+          success: () => {
+            window.location.href = '/';
+          },
+
+          store: JSON.stringify(data)
+
+          error: (req, status, message) => {
+            alert("Error: " + message);
+          }
+      });
+    });
+  });
+</script>
 </body>
-
 </html>
+
+</body>
+<script>
+    console.log("radi")
+</script>
+
+<div>
+    <footer>
+    </footer>
+</div>
+</html>
+
