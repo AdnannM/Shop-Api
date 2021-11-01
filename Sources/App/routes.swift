@@ -23,6 +23,9 @@ import Fluent
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
@@ -127,18 +130,35 @@ func routes(_ app: Application) throws {
 =======
     app.get { req -> EventLoopFuture<View> in
 
+<<<<<<< HEAD
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
         let person = Macbooks           (name: "Macbook Pro",
                                          model: "Space Gray",
                                          cpu: "Apple M1 Chip Max",
                                          price: 2999)
 
+=======
+//    app.get("store") { req -> Macbooks in
+//        
+//    }
+
+    app.get { req -> EventLoopFuture<View> in
+
+        let person = Macbooks           (name: "Macbook Pro",
+                                         model: "Space Gray",
+                                         cpu: "Apple M1 Chip Max",
+                                         price: 2999)
+
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
         return  req.view.render("shop", ["stores":[person]])
         
         
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
@@ -158,6 +178,9 @@ func routes(_ app: Application) throws {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
+=======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
 =======
 >>>>>>> parent of 70f7c7a (- clean code and get ready for mongoDB database)
