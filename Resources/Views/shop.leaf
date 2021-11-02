@@ -1,28 +1,10 @@
 <html>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/bson@4.4.0/dist/bson.browser.umd.js"></script>
-
-=======
-
-<head>
-=======
-
-<head>
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-
-<body>
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-=======
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/bson@4.4.0/dist/bson.browser.umd.js"></script>
+
     
->>>>>>> test
     <style>
         @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
@@ -279,8 +261,7 @@
         .form-sec {
             padding-top: 20px;
         }
-<<<<<<< HEAD
-=======
+
 
         #add-header {
             padding: 20;
@@ -435,7 +416,7 @@ html {
     padding-bottom = 450px;
 }
 
->>>>>>> test
+
     </style>
 </body>
 </head>
@@ -487,40 +468,6 @@ html {
         <h3 class="add-header">Add New Macbook</h3>
         <div class="inline" id="form-middle">
             <div id="form-right">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-                <form>
-                    <label  for="name"> Name</label>
-                    <input  type="text" name="name" size="30" maxlength="30">
-                    <label  for=lname>Model</label>
-                    <input  type="text" name="model" size="30" maxlength="30">
-                    <label  for="name"> Cpu</label>
-                    <input  type="text" name="cpu" size="30" maxlength="30">
-                    <label  for=lname>Price</label>
-                    <input  type="number" name="price" size="30" maxlength="30">
-                    <br clear="all">
-                    <input class="add-button" type="submit" value="Add" size="30" style="
-=======
-=======
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-                <form method="post" action="">
-                    <label for="name"> Name</label>
-                    <input type="text" name="username" size="30" maxlength="30">
-                    <label for=lname>Model</label>
-                    <input type="text" name="lname" size="30" maxlength="30">
-                    <label for="name"> Cpu</label>
-                    <input type="text" name="username" size="30" maxlength="30">
-                    <label for=lname>Price</label>
-                    <input type="number" name="lname" size="30" maxlength="30">
-                    <br clear="all">
-                    <input class="add-button" id="button" type="submit" value="Add" size="30" style="
-<<<<<<< HEAD
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-=======
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-=======
 
                 <form method="post" action="">
                     <label for="name"> Name</label>
@@ -534,7 +481,7 @@ html {
                     <br clear="all">
                     <input id="add-btn" class="add-button" id="button" type="submit" value="Add" size="30" style="
 
->>>>>>> test
+
                      padding-top: 5px;
                      color: rgb(241, 232, 232);
                      margin-top: 20px;
@@ -545,12 +492,6 @@ html {
             </div>
         </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> test
 
 <script type="text/javascript">
   $(document).ready(() => {
@@ -584,28 +525,26 @@ html {
     });
   });
 </script>
-<<<<<<< HEAD
+
 </body>
 </html>
-=======
-=======
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-</body>
-=======
 
->>>>>>> test
+
+
+</body>
+
 <script>
     console.log("radi")
 </script>
 
-<<<<<<< HEAD
+
 <div>
     <footer>
     </footer>
 </div>
 </html>
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-=======
+
+
 <div class="position-footer">
 <footer class="footer">
   <div class="footer__addr">
@@ -700,4 +639,3 @@ html {
 </body>
 </html>
 
->>>>>>> test

@@ -9,7 +9,7 @@ extension Request {
 }
 
 func routes(_ app: Application) throws {
-<<<<<<< HEAD
+
     /*
         - TODO:
             - A POST request will create a new store in the database.
@@ -43,9 +43,7 @@ func routes(_ app: Application) throws {
         }
     }
     
-<<<<<<< HEAD
-=======
-=======
+
     // A GET request will return a list of all store in the database.
     app.get { req -> EventLoopFuture<View> in
         
@@ -64,7 +62,7 @@ func routes(_ app: Application) throws {
     }
 
     // A POST request will create a new store in the database.
->>>>>>> test
+
     app.post { req -> EventLoopFuture<Response> in
         let newStore = try req.content.decode(Store.self)
 
@@ -72,19 +70,5 @@ func routes(_ app: Application) throws {
             .map { _ in Response(status: .created) }
     }
     
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-=======
->>>>>>> parent of 1a6d0c3 (fixin form field on webpage)
-=======
-//    app.post("store") { req -> EventLoopFuture<Response> in
-//        let newStore = try req.content.decode(Store.self)
-//        return req.storeCollection.insertOne(newStore)
-//            .map { _ in Response(status: .created) }
-//    }
-    
->>>>>>> test
 }
 
