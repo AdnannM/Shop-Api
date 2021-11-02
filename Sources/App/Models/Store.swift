@@ -22,12 +22,5 @@ final class Store: Content {
         self.cpu = cpu
         self.price = price
     }
-//    
-//    enum CodingKeys: String, CodingKey {
-//        case name = name
-//        case model = model
-//        case cpu = cpu
-//        case price = price
-//    }
 }
 
