@@ -1,610 +1,232 @@
 <html>
-
-<head>
+  <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/bson@4.4.0/dist/bson.browser.umd.js"></script>
-
-    
+<link rel="" type="" href="https://github.com/AdnannM/Shop-Api/blob/master/Resources/Views/style.css">
     <style>
-        @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-        body {
-            background-color: #010101;
-        }
-
-        .bg-img {
-            background-image: url(https://images.financialexpress.com/2020/11/mac1.jpg);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 100%;
-
-        }
-
-        h1 {
-            text-align: right;
-            border-top-left-radius: 2;
-            color: #ffffff;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
-            border-radius: 20px;
-            padding-right: 30px;
-            font-family: Montserrat;
-        }
-
-        .btn-con {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            padding-top: 350px;
-        }
-
-        .btn {
-            background-color: transparent;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
-            color: #f7f3f3;
-            padding: 10px 30px;
-            font-size: 20px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 256ms all;
-            border-radius: 25px;
-            text-align: 50%;
-            font-family: Montserrat;
-        }
-
-        .btn:hover {
-            background-color: #1b09bb;
-            color: #fff;
-            border-color: #f2f2f2;
-        }
-
-        a.btn:hover {
-            border: solid;
-            border-color: white;
-            border-width: 0.1;
-        }
-
-        #title {
-            text-align: right;
-            color: #ffffff;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
-            border-radius: 20px;
-            padding-right: 30px;
-            font-family: Montserrat;
-        }
-
-        .add-button {
-            width: 200px;
-            background: #f3f0f1;
-            background: #f3f0f1;
-            border-radius: 32px;
-            cursor: pointer;
-            transition: all 0.1s ease-in-out;
-            height: 34px;
-            background-color: #000000;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
-            text-align: center;
-            font-family: Montserrat;
-        }
-
-        .add-button:hover {
-            color: #c15371;
-        }
-
-        h3 {
-            padding-left: 20px;
-            color: #000000;
-            font-family: Montserrat;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 40%);
-            border-radius: 8px;
-            text-decoration: wavy;
-            margin-bottom: 15px;
-            margin-left: 35px;
-        }
-
-        ul {
-            color: #f2f2f2;
-            background-image: linear-gradient(to right, #c15371 20%, #010101 40%);
-            margin: 35px;
-            font-family: Montserrat;
-        }
-
-        input {
-            font-size: 120%;
-            color: #0a0a0a;
-            background-color: #000000;
-            border: 1px solid #faf8f8;
-            border-radius: 10px;
-            padding: 5px 5px 5px 10px;
-            background-repeat: no-repeat;
-            background-position: 8px 9px;
-            float: left;
-            color: rgb(255, 255, 255);
-            font-family: Montserrat;
-        }
-
-        input[type="number"] {
-            width: 334px !important;
-        }
-
-        input[type="submit"] {
-            display: block;
-        }
-
-        form {
-            width: 400px;
-            size: 30px;
-        }
-
-        label {
-            font-family: arial;
-            color: #f2f2f2;
-            width: 120px;
-            display: inline;
-            text-align: left;
-            padding: 10px 15px 10px 15px;
-            float: left;
-        }
-
-        #button {
-            border-radius = 20
-        }
-
-        .form-field {
-            text-align: center;
-            background-image: linear-gradient(to right, #c15371 21%, #010101 70%);
-            padding-top: 50px;
-        }
-
-        #main {
-            width: 100%;
-            margin: 7% auto 0;
-        }
-
-        #form-middle {
-            height: 260px;
-            display: inline;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            justify-content: space-evenly;
-            flex-direction: row;
-            padding-top: 50px;
-            margin-top: 40px;
-
-        }
-
-        #header-title {
-            position: relative;
-            text-align: right;
-            margin: 20px;
-        }
-
-        .inline {
-            text-align: right;
-            align-items: right;
-
-        }
-
-        #form-right {
-            background-image: linear-gradient(to right, #c15371 11%, #010101 70%);
-            float: right;
-            position: inline;
-            border-radius: 20px;
-            padding-left: 14px;
-        }
-
-        .list {
-            color: #000000;
-            border-radius: 20px;
-            line-height: 30px;
-        }
-
-        .add-header {
-            padding-right: 210px;
-            color: #fff8f8;
-            font-family: Montserrat;
-            text-align: right;
-            border-radius: 8px;
-            margin-left: 35px;
-        }
-
-        .frame {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            position: relative;
-            border-radius: 10px;
-            padding: 10px;
-            border-bottom: groove;
-            border-color: white;
-            border-width: 0.2;
-            
-        }
-
-        .btn-header {
-            height: 25px;
-            width: 25px;
-            border-radius: 10px;
-            background: #e0e5ec;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            -webkit-tap-highlight-color: transparent;
-            box-shadow:
-                -7px -7px 20px 0px #c15371,
-                -4px -4px 5px 0px #fff9,
-                7px 7px 20px 0px #0002,
-                4px 4px 5px 0px #0001,
-                inset 0px 0px 0px 0px #fff9,
-                inset 0px 0px 0px 0px #0001,
-                inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
-            transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
-            font-size: 16px;
-            color: rgba(42, 52, 84, 1);
-            text-decoration: none;
-            padding: 4.5px;
-            margin-left: 14px;
-            
-        }
-
-        .btn-header:active {
-            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2),
-                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
-                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-        }
-
-        .form-sec {
-            padding-top: 20px;
-        }
-
-
-        #add-header {
-            padding: 20;
-        }
-
-              *, *:before, *:after {
-                box-sizing: border-box;
-              }
-              html {
-                font-size: 100%;
-              }
-
-                  .footer {
-                display: flex;
-                flex-flow: row wrap;
-                padding: 30px 30px 20px 30px;
-                color: #2f2f2f;
-                <!-- background-color: #fff; -->
-                border-top: 1px solid #e5e5e5;
-              }
-
-              .footer > * {
-                flex:  1 100%;
-              }
-
-              .footer__addr {
-                margin-right: 1.25em;
-                margin-bottom: 2em;
-              }
-
-              .footer__logo {
-                font-family: 'Pacifico', cursive;
-                font-weight: 400;
-                text-transform: lowercase;
-                font-size: 1.5rem;
-              }
-
-              .footer__addr h2 {
-                margin-top: 1.3em;
-                font-size: 15px;
-                font-weight: 400;
-              }
-
-              .nav__title {
-                font-weight: 400;
-                font-size: 15px;
-              }
-
-              .footer address {
-                font-style: normal;
-                color: #999;
-              }
-
-              .footer__btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 36px;
-                max-width: max-content;
-                background-color: rgb(33, 33, 33, 0.07);
-                border-radius: 100px;
-                color: #2f2f2f;
-                line-height: 0;
-                margin: 0.6em 0;
-                font-size: 1rem;
-                padding: 0 1.3em;
-              }
-
-              .footer ul {
-                list-style: none;
-                padding-left: 0;
-              }
-
-              .footer li {
-                line-height: 2em;
-              }
-
-              .footer a {
-                text-decoration: none;
-              }
-
-              .footer__nav {
-                display: flex;
-                flex-flow: row wrap;
-              }
-
-              .footer__nav > * {
-                flex: 1 50%;
-                margin-right: 1.25em;
-              }
-
-              .nav__ul a {
-                color: #999;
-              }
-
-              .nav__ul--extra {
-                column-count: 2;
-                column-gap: 1.25em;
-              }
-
-              .legal {
-                display: flex;
-                flex-wrap: wrap;
-                color: #999;
-              }
-                
-              .legal__links {
-                display: flex;
-                align-items: center;
-              }
-
-              .heart {
-                color: #2f2f2f;
-              }
-
-              @media screen and (min-width: 24.375em) {
-                .legal .legal__links {
-                  margin-left: auto;
-                }
-              }
-
-              @media screen and (min-width: 40.375em) {
-                .footer__nav > * {
-                  flex: 1;
-                }
-                
-                .nav__item--extra {
-                  flex-grow: 2;
-                }
-                
-                .footer__addr {
-                  flex: 1 0px;
-                }
-                
-                .footer__nav {
-                  flex: 2 0px;
-                }
-              }
-
-              .position-footer {
-                  padding-bottom = 450px;
-              }
-
+        
     </style>
-</head>
+  </head>
 
-<body>
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <body>
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
 
     <div id="header-title">
-        <h1>Macbook Shop</h1>
-        <p id="title">Welcome to Macbook Shop</p>
+      <h1>Macbook Shop</h1>
+      <p id="title">Welcome to Macbook Shop</p>
     </div>
 
     <div class="frame">
-        <a href="#" class="btn-header">
-            <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
-        </a>
-        <a href="#" class="btn-header">
-            <i class="fab fa-twitter" style="color: #00acee;"></i>
-        </a>
-        <a href="#" class="btn-header">
-            <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
-        </a>
-        <a href="#" class="btn-header">
-            <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
-        </a>
-        <a href="#" class="btn-header">
-            <i class="fab fa-get-pocket" style="color:#ee4056;"></i>
-        </a>
-        <a href="#" class="btn-header">
-            <i class="far fa-envelope"></i>
-        </a>
+      <a href="#" class="btn-header">
+        <i class="fab fa-facebook-f" style="color: #3b5998"></i>
+      </a>
+      <a href="#" class="btn-header">
+        <i class="fab fa-twitter" style="color: #00acee"></i>
+      </a>
+      <a href="#" class="btn-header">
+        <i class="fab fa-dribbble" style="color: #ea4c89"></i>
+      </a>
+      <a href="#" class="btn-header">
+        <i class="fab fa-linkedin-in" style="color: #0e76a8"></i>
+      </a>
+      <a href="#" class="btn-header">
+        <i class="fab fa-get-pocket" style="color: #ee4056"></i>
+      </a>
+      <a href="#" class="btn-header">
+        <i class="far fa-envelope"></i>
+      </a>
     </div>
 
-    <section style="height: 500px;" class="bg-img" id="main">
-        <div id="button">
-            <div class="btn-con"><a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a></div>
+    <section style="height: 500px" class="bg-img" id="main">
+      <div id="button">
+        <div class="btn-con">
+          <a href="#form-sec" title="Hello button" class="btn">Welcome Shop</a>
         </div>
+      </div>
     </section>
 
-    <section id="form-sec" style="padding-top: 21px;">
-        <div class="form-field" , id="form-middle">
-            <h3>Available Macbooks:</h3>
-            <ul class="list">
-                #for(stores in store):
-                <li>#(stores.name + " " + stores.model)</li>
-                #endfor
+    <section id="form-sec" style="padding-top: 21px">
+      <div class="form-field" , id="form-middle">
+        <h3>Available Macbooks:</h3>
+        <ul class="list">
+          #for(stores in store):
+          <li>#(stores.name + " " + stores.model)</li>
+          #endfor
+        </ul>
+      </div>
+      <h3 class="add-header">Add New Macbook</h3>
+      <div class="inline" id="form-middle">
+        <div id="form-right">
+          <form method="post" action="">
+            <label for="name"> Name</label>
+            <input type="text" name="name" size="30" maxlength="30" id="name" />
+            <label for="lname">Model</label>
+            <input
+              type="text"
+              name="model"
+              size="30"
+              maxlength="30"
+              id="model"
+            />
+            <label for="name"> Cpu</label>
+            <input type="text" name="cpu" size="30" maxlength="30" id="cpu" />
+            <label for="lname">Price</label>
+            <input
+              type="number"
+              name="price"
+              size="30"
+              maxlength="30"
+              id="price"
+            />
+            <br clear="all" />
+            <input
+              id="add-btn"
+              class="add-button"
+              id="button"
+              type="submit"
+              value="Add"
+              size="30"
+              style="
+                padding-top: 5px;
+                color: rgb(241, 232, 232);
+                margin-top: 20px;
+                margin-left: 17%;
+              "
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="position-footer" style="margin-top: 400px; position: absolute">
+      <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">Something</h1>
+
+          <h2>Contact</h2>
+
+          <address>
+            5534 Somewhere In. The World 22193-10212<br />
+
+            <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+          </address>
+        </div>
+
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Media</h2>
+
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Online</a>
+              </li>
+
+              <li>
+                <a href="#">Print</a>
+              </li>
+
+              <li>
+                <a href="#">Alternative Ads</a>
+              </li>
             </ul>
+          </li>
+
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Technology</h2>
+
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">Hardware Design</a>
+              </li>
+
+              <li>
+                <a href="#">Software Design</a>
+              </li>
+
+              <li>
+                <a href="#">Digital Signage</a>
+              </li>
+
+              <li>
+                <a href="#">Automation</a>
+              </li>
+
+              <li>
+                <a href="#">Artificial Intelligence</a>
+              </li>
+
+              <li>
+                <a href="#">IoT</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="legal">
+          <p>&copy; 2019 Something. All rights reserved.</p>
+
+          <div class="legal__links">
+            <span
+              >Made with <span class="heart">♥</span> remotely from
+              Anywhere</span
+            >
+          </div>
         </div>
-        <h3 class="add-header">Add New Macbook</h3>
-        <div class="inline" id="form-middle">
-            <div id="form-right">
-
-                <form method="post" action="">
-                    <label for="name"> Name</label>
-                    <input type="text" name="name" size="30" maxlength="30" id="name">
-                    <label for=lname>Model</label>
-                    <input type="text" name="model" size="30" maxlength="30" id="model">
-                    <label for="name"> Cpu</label>
-                    <input type="text" name="cpu" size="30" maxlength="30" id="cpu">
-                    <label for=lname>Price</label>
-                    <input type="number" name="price" size="30" maxlength="30" id="price">
-                    <br clear="all">
-                    <input id="add-btn" class="add-button" id="button" type="submit" value="Add" size="30" style="
-
-
-                     padding-top: 5px;
-                     color: rgb(241, 232, 232);
-                     margin-top: 20px;
-                     margin-left: 17%;
-                    ">
-            
-                </form>
-            </div>
-        </div>
-    </section>
-
-<script type="text/javascript">
-  $(document).ready(() => {
-    $("\#macbook-btn").click(() => {
-      var name = $("\#name").val();
-      var model = $("\#model").val();
-      var cpu = $("\#cpu").val();
-      var price = $(#price).val();
-      
-      var store = BSON.EJSON.stringify({
-        'name': name,
-         'model': model,
-         'cpu': cpu,
-         'price': price
-      })
-      $.ajax({
-          type:'POST',
-          contentType : 'application/json',
-          url:'',
-          data: store,
-          success: () => {
-            window.location.href = '/';
-          },
-
-          store: JSON.stringify(data)
-
-          error: (req, status, message) => {
-            alert("Error: " + message);
-          }
-      });
-    });
-  });
-</script>
-
-</body>
-
-<div class="position-footer">
-<footer class="footer">
-  <div class="footer__addr">
-    <h1 class="footer__logo">Something</h1>
-        
-    <h2>Contact</h2>
-    
-    <address>
-      5534 Somewhere In. The World 22193-10212<br>
-          
-      <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
-    </address>
-  </div>
-  
-  <ul class="footer__nav">
-    <li class="nav__item">
-      <h2 class="nav__title">Media</h2>
-
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Online</a>
-        </li>
-
-        <li>
-          <a href="#">Print</a>
-        </li>
-            
-        <li>
-          <a href="#">Alternative Ads</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li class="nav__item nav__item--extra">
-      <h2 class="nav__title">Technology</h2>
-      
-      <ul class="nav__ul nav__ul--extra">
-        <li>
-          <a href="#">Hardware Design</a>
-        </li>
-        
-        <li>
-          <a href="#">Software Design</a>
-        </li>
-        
-        <li>
-          <a href="#">Digital Signage</a>
-        </li>
-        
-        <li>
-          <a href="#">Automation</a>
-        </li>
-        
-        <li>
-          <a href="#">Artificial Intelligence</a>
-        </li>
-        
-        <li>
-          <a href="#">IoT</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li class="nav__item">
-      <h2 class="nav__title">Legal</h2>
-      
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        
-        <li>
-          <a href="#">Terms of Use</a>
-        </li>
-        
-        <li>
-          <a href="#">Sitemap</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  
-  <div class="legal">
-    <p>&copy; 2019 Something. All rights reserved.</p>
-    
-    <div class="legal__links">
-      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+      </footer>
     </div>
-  </div>
-</footer>
-</div>
-</html>
 
+    <script type="text/javascript">
+      $(document).ready(() => {
+        $("\#macbook-btn").click(() => {
+          var name = $("\#name").val();
+          var model = $("\#model").val();
+          var cpu = $("\#cpu").val();
+          var price = $(#price).val();
+
+          var store = BSON.EJSON.stringify({
+            'name': name,
+             'model': model,
+             'cpu': cpu,
+             'price': price
+          })
+          $.ajax({
+              type:'POST',
+              contentType : 'application/json',
+              url:'',
+              data: store,
+              success: () => {
+                window.location.href = '/';
+              },
+
+              store: JSON.stringify(data)
+
+              error: (req, status, message) => {
+                alert("Error: " + message);
+              }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
