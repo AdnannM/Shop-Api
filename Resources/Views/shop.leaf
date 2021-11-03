@@ -442,7 +442,7 @@ flex: 2 0px;
         <ul class="list">
           #for(stores in store):
           <li>#(stores.name + " " + stores.model + " | " + stores.price + "\($)")</li>
-          <li>#(stores.cpu)</li>
+          
           #endfor
         </ul>
       </div>

@@ -28,6 +28,7 @@ func routes(_ app: Application) throws {
     // A POST request will create a new store in the database.
     app.post { req -> EventLoopFuture<Response> in
         let newStore = try req.content.decode(Store.self)
+        newStore.createdAt = Date()
         return req.storeCollection.insertOne(newStore).map { _ in Response(status: .created) }
     }
 }
