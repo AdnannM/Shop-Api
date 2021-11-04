@@ -8,6 +8,12 @@ extension Request {
     }
 }
 
+extension Request {
+    var orderCollection: MongoCollection<Order> {
+        self.mongoDB.client.db("storeDb").collection("order", withType: Order.self)
+    }
+}
+
 func routes(_ app: Application) throws {
     /*
      - TODO:
@@ -25,11 +31,37 @@ func routes(_ app: Application) throws {
         }
     }
     
+    app.get { req -> EventLoopFuture<View> in
+        req.orderCollection.find().flatMap { cursor in
+            cursor.toArray()
+        }.flatMap { order in
+            req.view.render("shop.leaf", ["order": order])
+        }
+    }
+    
+    /// Handles a request to load the list of kittens.
+    app.get("store") { req -> EventLoopFuture<[Store]> in
+        req.storeCollection.find().flatMap { cursor in
+            cursor.toArray()
+        }
+    }
+    
     // A POST request will create a new store in the database.
     app.post { req -> EventLoopFuture<Response> in
         let newStore = try req.content.decode(Store.self)
         newStore.createdAt = Date()
         return req.storeCollection.insertOne(newStore).map { _ in Response(status: .created) }
+    }
+    
+    app.post("order") { req -> EventLoopFuture<Response> in
+        let newOrder  = try req.content.decode(Order.self)
+        return req.orderCollection.insertOne(newOrder).map { _ in Response(status: .created) }
+    }
+    
+    app.get("order") { req -> EventLoopFuture<[Order]> in
+        req.orderCollection.find().flatMap { cursor in
+            cursor.toArray()
+        }
     }
 }
 

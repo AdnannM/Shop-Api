@@ -393,7 +393,12 @@ flex: 1 0px;
 flex: 2 0px;
 }
 }
-    </style>
+
+.orders {
+  color: white;
+}
+
+   </style>
   </head>
 
   <body>
@@ -441,10 +446,19 @@ flex: 2 0px;
         <h3>Available Macbooks:</h3>
         <ul class="list">
           #for(stores in store):
-          <li>#(stores.name + " " + stores.model + " | " + stores.price + "\($)")</li>
-          
+
+          <li>#(stores.name + " " + stores.model + " | " + stores.price)</li>
+          <li>#(store.createdAt)
           #endfor
         </ul>
+
+         <h3>Orders:</h3>
+         <ul class="list">
+          #for(orders in order):
+          <li>#(orders.itemName + " " + orders.buyerName)</li>
+          #endfor
+        </ul>
+         
       </div>
       <h3 class="add-header">Add New Macbook</h3>
       <div class="inline" id="form-middle">
