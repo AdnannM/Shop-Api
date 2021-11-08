@@ -1,5 +1,6 @@
 import MongoDBVapor
 import Vapor
+import Leaf
 
 extension Request {
     /// Convenience accessor for the home.store collection.
@@ -30,15 +31,7 @@ func routes(_ app: Application) throws {
             req.view.render("shop.leaf", ["store": store])
         }
     }
-    
-    app.get { req -> EventLoopFuture<View> in
-        req.orderCollection.find().flatMap { cursor in
-            cursor.toArray()
-        }.flatMap { order in
-            req.view.render("shop.leaf", ["order": order])
-        }
-    }
-    
+
     /// Handles a request to load the list of kittens.
     app.get("store") { req -> EventLoopFuture<[Store]> in
         req.storeCollection.find().flatMap { cursor in

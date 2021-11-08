@@ -444,21 +444,15 @@ flex: 2 0px;
     <section id="form-sec" style="padding-top: 21px">
       <div class="form-field" , id="form-middle">
         <h3>Available Macbooks:</h3>
-        <ul class="list">
-          #for(stores in store):
-
-          <li>#(stores.name + " " + stores.model + " | " + stores.price)</li>
-          <li>#(store.createdAt)
-          #endfor
-        </ul>
-
-         <h3>Orders:</h3>
+       
          <ul class="list">
-          #for(orders in order):
-          <li>#(orders.itemName + " " + orders.buyerName)</li>
+          #for(stores in store):
+          <li>#(stores.name + " " + stores.model + " | " + stores.price)</li>
+         <li>#createdAt(now)<li>
           #endfor
         </ul>
-         
+         <h3>Orders:</h3>
+          
       </div>
       <h3 class="add-header">Add New Macbook</h3>
       <div class="inline" id="form-middle">
