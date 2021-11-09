@@ -264,9 +264,6 @@ label {
     padding: 20px;
 }
 
-
-
-
 .footer {
 display: flex;
 flex-flow: row wrap;
