@@ -1,20 +1,24 @@
-FROM swift:5.4
-FROM --platform=linux/x86_64 ubuntu:18.04
+#FROM swift:5.5.1
+#WORKDIR /myapi
+#EXPOSE 8080
+#COPY . ./
+#CMD swift package clean
+#CMD swift run
 
-RUN apt-get update && apt-get install -y sudo openssl libssl-dev libcurl4-openssl-dev
 
-EXPOSE 8080
+# Build image
+FROM vapor/swift:5.2 as build
+WORKDIR /build
+COPY ./Package.* ./
+RUN swift package resolve
+COPY . .
+RUN swift build --enable-test-discovery -c release -Xswiftc -g
 
-RUN mkdir /swift-shopAPI
-
-ADD Sources /swift-shopAPI/Sources
-ADD Package.swift /swift-shopAPI
-ADD Package.resolved /swift-shopAPI
-ADD LICENSE /swift-shopAPI
-ADD .swift-version /swift-shopAPI
-
-# Build Swift Starter App
-RUN cd /swift-shopAPI && swift build
-
-USER root
-CMD ["/swift-shopAPI/.build-linux/x86_64-unknown-linux/debug/Server"]
+# Run image
+FROM vapor/ubuntu:18.04
+WORKDIR /run
+COPY --from=build /build/.build/release /run
+COPY --from=build /usr/lib/swift/ /usr/lib/swift/
+COPY --from=build /build/Public /run/Public
+ENTRYPOINT ["./Run"]
+CMD ["serve", "--env", "production", "--hostname", "0.0.0.0"]
