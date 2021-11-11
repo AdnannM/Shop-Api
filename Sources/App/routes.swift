@@ -32,9 +32,6 @@ func routes(_ app: Application) throws {
         }
     }
     
-    app.get("heloo") { String in
-        return "Hello"
-    }
     /// Handles a request to load the list of kittens.
     app.get("store") { req -> EventLoopFuture<[Store]> in
         req.storeCollection.find().flatMap { cursor in
